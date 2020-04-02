@@ -7,6 +7,7 @@ import FormInput from '../FormInput/FormInput';
 import customValidator from '../../validators/validator';
 import Schems from '../../validators/validationSchems';
 import Error from '../../components/Error/Error';
+import PropTypes from 'prop-types';
 
 
 class LoginForm extends React.Component {
@@ -21,32 +22,30 @@ class LoginForm extends React.Component {
 
 
     render() {
-        const {error, isFetching} = this.props.auth;
-        const {handleSubmit, submitting, authClear} = this.props;
+        const {isFetching} = this.props.auth;
+        const {handleSubmit, submitting} = this.props;
 
-        const formInputClasses = {
-          container: styles.inputContainer,
-          input: styles.input,
-          warning: styles.fieldWarning,
-          notValid: styles.notValid,
-          valid:styles.valid,
-        };
+      const formInputClasses ={
+        container: styles.inputContainer,
+        className: styles.input,
+        warning: styles.fieldWarning,
+        validStyles: styles.valid,
+        invalidStyles: styles.notValid,
+      };
 
         return (
-            <div className={styles.loginForm}>
-                {error && <Error data={error.data} status={error.status} clearError={authClear}/>}
 
                 <form onSubmit={handleSubmit(this.submit)}>
                     <Field
                         name='email'
-                        classes={formInputClasses}
+                        {...formInputClasses}
                         component={FormInput}
                         type='text'
                         label='Email Address'
                     />
                     <Field
                         name='password'
-                        classes={formInputClasses}
+                        {...formInputClasses}
                         component={FormInput}
                         type='password'
                         label='password'
@@ -55,7 +54,7 @@ class LoginForm extends React.Component {
                         <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'LOGIN'}</span>
                     </button>
                 </form>
-            </div>
+
         );
     }
 }
