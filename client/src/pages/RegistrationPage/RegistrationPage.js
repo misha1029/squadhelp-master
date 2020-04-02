@@ -35,6 +35,14 @@ const RegistrationPage = (props) => {
 							      style={{textDecoration: 'none'}}><span>Login</span></Link>
 						</div>
 					</div>
+            <div className={ styles.headerFormContainer }>
+                <h2>
+                    CREATE AN ACCOUNT
+                </h2>
+                <h4>
+                    We always keep your name and email address private.
+                </h4>
+            </div>
 					<RegistrationForm/>
 				</div>
 				<div className={styles.footer}>
