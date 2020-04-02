@@ -9,9 +9,11 @@ import CONSTANTS from '../../constants';
 import article from './article.json';
 
 const RegistrationPage = (props) => {
+
 	props.clearError();
 
 	const articlesElement = article.map(article => (
+
 					<>
 						<div className={styles.headerArticle}>{article.header}
 						</div>
@@ -19,6 +21,7 @@ const RegistrationPage = (props) => {
 							{article.article}
 						</div>
 					</>
+
 			)
 	);
 
