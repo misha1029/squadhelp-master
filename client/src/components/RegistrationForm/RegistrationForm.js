@@ -31,18 +31,17 @@ class RegistrationForm extends React.Component {
 		});
 	};
 
+	formInputClasses = {
+		classInputStyle: styles.input,
+		classNotValid:  styles.notValid,
+		classValid:  styles.valid,
+		classInputContainer: styles.inputContainer,
+		classWarningForContainer: styles.fieldWarning,
+	};
 
 	render() {
 		const {handleSubmit, submitting, auth, authClear} = this.props;
 		const {error} = auth;
-
-		const formInputClasses ={
-			container: styles.inputContainer,
-			className: styles.input,
-			warning: styles.fieldWarning,
-			validStyles: styles.valid,
-			invalidStyles: styles.notValid,
-		};
 
 		return (
 				<div className={styles.signUpFormContainer}>
@@ -51,14 +50,14 @@ class RegistrationForm extends React.Component {
 						<div className={styles.row}>
 							<Field
 									name='firstName'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='text'
 									label='First name'
 							/>
 							<Field
 									name='lastName'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='text'
 									label='Last name'
@@ -67,14 +66,14 @@ class RegistrationForm extends React.Component {
 						<div className={styles.row}>
 							<Field
 									name='displayName'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='text'
 									label='Display Name'
 							/>
 							<Field
 									name='email'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='text'
 									label='Email Address'
@@ -83,14 +82,14 @@ class RegistrationForm extends React.Component {
 						<div className={styles.row}>
 							<Field
 									name='password'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='password'
 									label='Password'
 							/>
 							<Field
 									name='confirmPassword'
-									{...formInputClasses}
+									{...this.formInputClasses}
 									component={FormInput}
 									type='password'
 									label='Password confirmation'

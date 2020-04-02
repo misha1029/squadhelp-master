@@ -21,31 +21,30 @@ class LoginForm extends React.Component {
     };
 
 
+  formInputClasses = {
+    classInputStyle: styles.input,
+    classNotValid:  styles.notValid,
+    classValid:  styles.valid,
+    classInputContainer: styles.inputContainer,
+    classWarningForContainer: styles.fieldWarning,
+  };
+
     render() {
         const {isFetching} = this.props.auth;
         const {handleSubmit, submitting} = this.props;
-
-      const formInputClasses ={
-        container: styles.inputContainer,
-        className: styles.input,
-        warning: styles.fieldWarning,
-        validStyles: styles.valid,
-        invalidStyles: styles.notValid,
-      };
-
         return (
 
                 <form onSubmit={handleSubmit(this.submit)}>
                     <Field
                         name='email'
-                        {...formInputClasses}
+                        {...this.formInputClasses}
                         component={FormInput}
                         type='text'
                         label='Email Address'
                     />
                     <Field
                         name='password'
-                        {...formInputClasses}
+                        {...this.formInputClasses}
                         component={FormInput}
                         type='password'
                         label='password'

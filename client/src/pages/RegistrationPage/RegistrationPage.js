@@ -43,8 +43,9 @@ const RegistrationPage = (props) => {
                     We always keep your name and email address private.
                 </h4>
             </div>
+					</div>
 					<RegistrationForm/>
-				</div>
+
 				<div className={styles.footer}>
 					<div className={styles.articlesMainContainer}>
 						<div className={styles.ColumnContainer}>

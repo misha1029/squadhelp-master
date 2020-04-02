@@ -1,31 +1,22 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
+
 
 const FormInput = (props) => {
-    const {label, input, type, meta: {touched, error},warning,validStyle,invalidStyle,container,className} = props;
-
-    const inputClassName = classNames(className, {
-        [invalidStyle]: touched && error,
-        [validStyle]: touched && !error,
-    });
+    const {label, input, type, classInputStyle, classNotValid,classValid, classInputContainer,classWarningForContainer, meta: {touched, error}} = props;
+    const classInput = classNames(classInputStyle,
+        {[classNotValid]: touched && error,
+            [classValid]: touched && !error }
+    );
     return (
-        <div className={container}>
+        <div className={classInputContainer}>
             <input {...input} placeholder={label} type={type}
-                   className={inputClassName}/>
-            { warning && ( touched &&
-                ( error && <span className={ warning }>{ error }</span> ) ) }
+                   className={classInput}/>
+            {classWarningForContainer && (touched && (error && <span className={classWarningForContainer}>{error}</span>))}
+
         </div>
     );
 };
 
-FormInput.propTypes={
-    validStyle:PropTypes.string,
-    invalidStyle:PropTypes.string,
-    className:PropTypes.string.isRequired,
-    container:PropTypes.string.isRequired,
-    warning:PropTypes.string.isRequired
-
-};
 
 export default FormInput;
