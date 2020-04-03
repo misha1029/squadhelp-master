@@ -4,13 +4,18 @@ import styles from './RegistrationPage.module.sass';
 import Logo from '../../components/Logo';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {clearErrorSignUpAndLogin} from '../../actions/actionCreator';
+import {authActionRegister, clearAuth, clearErrorSignUpAndLogin} from '../../actions/actionCreator';
 import CONSTANTS from '../../constants';
 import article from './article.json';
+import Error from "../../components/Error/Error";
+import _ from 'lodash';
 
-const RegistrationPage = (props) => {
+const RegistrationPage = ({clearError, authClear, register, error, ...props}) => {
 
-	props.clearError();
+
+	const handleSubmit = data => {
+		register(_.omit(data, ['agreeOfTerms', 'agreeOfTerms']));
+	};
 
 	const articlesElement = article.map(article => (
 
@@ -35,17 +40,23 @@ const RegistrationPage = (props) => {
 							      style={{textDecoration: 'none'}}><span>Login</span></Link>
 						</div>
 					</div>
-            <div className={ styles.headerFormContainer }>
-                <h2>
-                    CREATE AN ACCOUNT
-                </h2>
-                <h4>
-                    We always keep your name and email address private.
-                </h4>
-            </div>
-					</div>
-					<RegistrationForm/>
+					<div className={styles.signUpFormContainer}>
+						{error && <Error data={error.data} status={error.status}
+						                 clearError={authClear}/>}
+						<div className={styles.headerFormContainer}>
+							<h2>
+								CREATE AN ACCOUNT
+							</h2>
+							<h4>
+								We always keep your name and email address private.
+							</h4>
+						</div>
 
+						<RegistrationForm onSubmit={handleSubmit}/>
+
+
+					</div>
+				</div>
 				<div className={styles.footer}>
 					<div className={styles.articlesMainContainer}>
 						<div className={styles.ColumnContainer}>
@@ -65,11 +76,23 @@ const RegistrationPage = (props) => {
 	);
 };
 
+const mapStateToProps = state => (
+		{
+			auth: state.auth,
+			initialValues: {
+				role: CONSTANTS.CUSTOMER
+			},
+		}
+);
 
-const mapDispatchToProps = (dispatch) => {
+
+const mapDispatchToProps = dispatch => {
 	return {
-		clearError: () => dispatch(clearErrorSignUpAndLogin())
+		clearError: () => dispatch(clearErrorSignUpAndLogin()),
+		authClear: () => dispatch(clearAuth()),
+		register: data => dispatch(authActionRegister(data)),
 	}
 };
 
-export default connect(null, mapDispatchToProps)(RegistrationPage);
+export default connect(mapStateToProps, mapDispatchToProps)(RegistrationPage);
+
