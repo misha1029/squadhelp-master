@@ -6,8 +6,7 @@ import {Field, reduxForm} from 'redux-form';
 import FormInput from '../FormInput/FormInput';
 import customValidator from '../../validators/validator';
 import Schems from '../../validators/validationSchems';
-import Error from '../../components/Error/Error';
-import PropTypes from 'prop-types';
+
 
 
 class LoginForm extends React.Component {

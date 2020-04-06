@@ -13,7 +13,6 @@ const FormInput = (props) => {
             <input {...input} placeholder={label} type={type}
                    className={classInput}/>
             {classWarningForContainer && (touched && (error && <span className={classWarningForContainer}>{error}</span>))}
-
         </div>
     );
 };
