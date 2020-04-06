@@ -1,4 +1,3 @@
-
 .choseRoleContainer
   display: flex
   flex-direction: column
@@ -25,6 +24,7 @@
   border: 0
   width: fill-available
   margin-right: 20px
+  margin-top: 5px
   @media(max-width: 850px)
     align-self: auto
 
@@ -125,6 +125,11 @@ a
   outline: none
   margin-bottom: 15px
   flex: 1
+  //&:valid
+    border: 2px solid green
+  &:invalid
+    border: 2px solid red !important
+
   @media(max-width: 1400px)
     align-self: normal
 

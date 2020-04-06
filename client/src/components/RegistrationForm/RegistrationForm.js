@@ -12,13 +12,7 @@ import Schems from '../../validators/validationSchems';
 class RegistrationForm extends React.Component {
 
 
-	formInputClasses = {
-		classInputStyle: styles.input,
-		classNotValid: styles.notValid,
-		classValid: styles.valid,
-		classInputContainer: styles.inputContainer,
-		classWarningForContainer: styles.fieldWarning,
-	};
+
 
 	render() {
 		const {handleSubmit, submitting} = this.props;
@@ -28,14 +22,18 @@ class RegistrationForm extends React.Component {
 					<div className={styles.row}>
 						<Field
 								name='firstName'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='text'
 								label='First name'
 						/>
 						<Field
 								name='lastName'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='text'
 								label='Last name'
@@ -44,14 +42,18 @@ class RegistrationForm extends React.Component {
 					<div className={styles.row}>
 						<Field
 								name='displayName'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='text'
 								label='Display Name'
 						/>
 						<Field
 								name='email'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='text'
 								label='Email Address'
@@ -60,14 +62,18 @@ class RegistrationForm extends React.Component {
 					<div className={styles.row}>
 						<Field
 								name='password'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='password'
 								label='Password'
 						/>
 						<Field
 								name='confirmPassword'
-								{...this.formInputClasses}
+								className = {styles.input}
+								containerClassName = {styles.inputContainer}
+								errorClassName = {styles.fieldWarning}
 								component={FormInput}
 								type='password'
 								label='Password confirmation'
