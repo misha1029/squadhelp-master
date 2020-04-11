@@ -1,13 +1,13 @@
-const appExpress = require('express');
+const express = require('express');
 const router = require('./router');
 const cors = require('cors');
 const handlerError = require('./handlerError/handler');
 
-const app = appExpress();
+const app = express();
 
 app.use(cors());
-app.use(appExpress.json());
-app.use('/public', appExpress.static('public'));
+app.use(express.json());
+app.use('/public', express.static('public'));
 app.use(router);
 app.use(handlerError);
 
