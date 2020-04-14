@@ -9,17 +9,17 @@ const data = [
 	{
 		id: 1,
 		isMoney: true,
-		sum: 350
+		sum: '350$'
 	},
 	{
 		id: 2,
 		isMoney: false,
-		sum: 350
+		sum: '350$'
 	},
 	{
 		id: 3,
 		isMoney: true,
-		sum: 1000
+		sum: '1000$'
 	}
 ]
 

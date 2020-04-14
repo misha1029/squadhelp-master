@@ -9,7 +9,7 @@ const UserTransactionTable = props => {
 				<thead>
 				<tr>
 					<th>Id</th>
-					<th>Earned / Spent</th>
+					<th>Income / Expense</th>
 					<th>Amount of money</th>
 				</tr>
 				</thead>
@@ -20,7 +20,7 @@ const UserTransactionTable = props => {
 								<td>{transaction.id}</td>
 								<td>
 									{
-										transaction.isMoney ? 'Earned' : 'Spent'
+										transaction.isMoney ? 'Income' : 'Expense'
 									}
 								</td>
 								<td>
