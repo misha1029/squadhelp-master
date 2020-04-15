@@ -8,18 +8,18 @@ import UserTransactionTable from "../../components/UserTransactionTable/UserTran
 const data = [
 	{
 		id: 1,
-		isMoney: true,
-		sum: '350$'
+		operationType: true,
+		sum: '-350$'
 	},
 	{
 		id: 2,
-		isMoney: false,
-		sum: '350$'
+		operationType: false,
+		sum: '+350$'
 	},
 	{
 		id: 3,
-		isMoney: true,
-		sum: '1000$'
+		operationType: true,
+		sum: '+1000$'
 	}
 ]
 

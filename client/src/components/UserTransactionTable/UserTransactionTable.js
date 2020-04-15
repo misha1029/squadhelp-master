@@ -20,15 +20,10 @@ const UserTransactionTable = props => {
 								<td>{transaction.id}</td>
 								<td>
 									{
-										transaction.isMoney ? 'Income' : 'Expense'
+										transaction.operationType ? 'Income' : 'Expense'
 									}
 								</td>
-								<td>
-									{
-										transaction.isMoney ? `+${transaction.sum}` : `-${transaction.sum}`
-									}
-								</td>
-
+								<td>{transaction.sum}</td>
 							</tr>
 					))
 				}
@@ -43,7 +38,7 @@ const UserTransactionTable = props => {
 UserTransactionTable.propTypes = {
 	data: PropTypes.arrayOf(PropTypes.shape({
 		id: PropTypes.number,
-		isMoney: PropTypes.bool,
+		operationType: PropTypes.bool,
 		sum: PropTypes.number,
 	}))
 };
