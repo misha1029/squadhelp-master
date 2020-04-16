@@ -436,9 +436,17 @@ export const changeModalShow=(data)=>{
         data: data
     }
 };
-export const addContestTypeAction=(data)=>{
-    return{
+
+export const addContestType = data => {
+    return {
         type: ACTION.ADD_CONTEST_TYPE,
-        data: data
+        data: data,
+    }
+};
+
+export const removeContestType = data => {
+    return {
+        type: ACTION.REMOVE_CONTEST_TYPE,
+        data: data,
     }
 };
