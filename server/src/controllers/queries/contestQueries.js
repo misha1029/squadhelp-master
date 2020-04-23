@@ -49,3 +49,13 @@ module.exports.createOffer = async (data) => {
     return result.get({ plain: true });
   }
 };
+
+module.exports.getOffers = async (value) => {
+  const result = await bd.Offers.create(value);
+  if (result) {
+    return result;
+  }else {
+    throw new ServerError('cannot get offer');
+  }
+};
+

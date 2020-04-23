@@ -190,4 +190,9 @@ router.get(
   userTransactionHistoryController.getUserStatement
 );
 
+router.get(
+  '/getOffersFiles',
+  contestController.getOffersFiles
+);
+
 module.exports = router;
