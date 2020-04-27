@@ -62,7 +62,7 @@ class Header extends React.Component {
             return null;
         }
         return (
-            <div className={styles.headerContainer}>
+            <div className={styles.headerContainer} id={this.props.id}>
                 <div className={styles.fixedHeader}>
                     <span className={styles.info}>Squadhelp recognized as one of the Most Innovative Companies by Inc Magazine.</span>
                     <a target="_blank"  href="http://www.google.com">Read Announcement</a>
@@ -101,7 +101,7 @@ class Header extends React.Component {
                                     <span>CONTESTS</span><img src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                                                               alt='menu'/>
                                     <ul>
-                                        <li><a target="_blank"  href="http://www.google.com">HOW IT WORKS</a></li>
+                                        <li><Link to='/howItWorks'>HOW IT WORKS</Link></li>
                                         <li><a target="_blank"  href="http://www.google.com">PRICING</a></li>
                                         <li><a target="_blank"  href="http://www.google.com">AGENCY SERVICE</a></li>
                                         <li><a target="_blank" href="http://www.google.com">ACTIVE CONTESTS</a></li>
