@@ -1,5 +1,7 @@
-$accent-color: #28D2D0
-$link-touch-color: #f18762
+$blue-color: #28D2D0
+$white-color: #fff
+$red-color: #F18762
+
 
 .container
   max-width: 1170px
@@ -16,8 +18,10 @@ $link-touch-color: #f18762
     display: flex
     justify-content: center
     align-items: center
-    margin-top: 15px
     flex-direction: column
+
+    margin-top: 15px
+
 
 
 .headerLabel
@@ -29,6 +33,7 @@ $link-touch-color: #f18762
     @media screen and (max-width: 768px)
       margin: 10px
       text-align: center
+
   p
     font-size: 16px
     line-height: 25px
@@ -45,7 +50,6 @@ $link-touch-color: #f18762
 .stepContainer
   display: flex
   justify-content: center
-  align-items: normal
   flex-wrap: wrap
 
 
@@ -53,6 +57,7 @@ $link-touch-color: #f18762
   max-width: 165px
   margin: 0 10px
   text-align: center
+
   div
     display: flex
     justify-content: center
@@ -60,13 +65,13 @@ $link-touch-color: #f18762
     height: 90px
     width: 90px
     border-radius: 50%
-    background-color: #ebebeb
+    background-color: $white-color
     margin: 0 auto
     font-size: 30px
     font-weight: 700
 
     &:hover
-      background-color: $accent-color
+      background-color: $blue-color
       cursor: pointer
       color: white
   h4
@@ -82,25 +87,25 @@ $link-touch-color: #f18762
 .startContestLink
   display: flex
   justify-content: center
-  background-color: $accent-color
+  background-color: $blue-color
   margin-top: 60px
   padding: 30px 0
   a
     display: block
     padding: 18px 0
-    border: 2px solid white
+    border: 2px solid $white-color
     border-radius: 5px
     width: 235px
     font-weight: 800
-    color: white
+    color: $white-color
     font-size: 20px
     text-transform: uppercase
     text-align: center
     text-decoration: none
 
     &:hover
-      background-color: white
-      color: $accent-color
+      background-color: $white-color
+      color: $blue-color
 
 .questionsContainer
   margin: 80px 0
@@ -109,7 +114,7 @@ $link-touch-color: #f18762
   display: flex
   align-items: center
   overflow: hidden
-  border-bottom: 1px solid #e1e1e1
+  border-bottom: 1px solid $white-color
   padding: 20px 10px
 
 .questionsMark
@@ -119,8 +124,8 @@ $link-touch-color: #f18762
   height: 60px
   width: 60px
   border-radius: 50%
-  border: 2px solid $accent-color
-  color: $accent-color
+  border: 2px solid $blue-color
+  color: $blue-color
   font-size: 36px
 
 .questionsTitle
@@ -147,7 +152,7 @@ $link-touch-color: #f18762
       line-height: 20px
       margin-top: 15px
       a
-        color: $accent-color
+        color: $blue-color
 
 
 .linkContainer
@@ -159,7 +164,7 @@ $link-touch-color: #f18762
     padding: 0
 
 .link
-  color: $accent-color
+  color: $blue-color
 
 
 .getInTouch
@@ -167,7 +172,7 @@ $link-touch-color: #f18762
   justify-content: center
   align-items: center
   padding: 35px 0
-  color: white
+  color: $white-color
   width: 100%
   background-color: #455A89
 
@@ -181,7 +186,7 @@ $link-touch-color: #f18762
   display: flex
   justify-content: center
   align-items: center
-  background-color: white
+  background-color: $white-color
   height: 100px
   width: 100px
   border-radius: 50%
@@ -195,16 +200,16 @@ $link-touch-color: #f18762
   max-width: 650px
   h1
     margin: 0 0 40px
-    color: white
+    color: $white-color
   p
     margin: 20px 0 0
     text-decoration: none
     font-size: 20px
     font-weight: 300
-    color: white
+    color: $white-color
     a
       font-size: 20px
-      color: $link-touch-color
+      color: $red-color
       text-decoration: none
 
 .touchButton
@@ -213,14 +218,14 @@ $link-touch-color: #f18762
   a
     padding: 22px 40px
     border-radius: 5px
-    border: 2px solid white
+    border: 2px solid $white-color
     text-decoration: none
-    color: white
+    color: $white-color
     text-transform: uppercase
     font-weight: 700
     &:hover
-      background-color: white
-      color: $accent-color
+      background-color: $white-color
+      color: $blue-color
   @media screen and (max-width: 768px)
     margin-top: 20px
 
@@ -228,14 +233,14 @@ $link-touch-color: #f18762
   display: flex
   justify-content: center
   align-items: center
+  position: fixed
   height: 33px
   width: 33px
   border-radius: 50%
   font-size: 15px
-  color: white
+  color: $white-color
   cursor: pointer
-  position: fixed
   right: 10px
   bottom: 70px
-  background-color: #f18762
+  background-color: $red-color
 
