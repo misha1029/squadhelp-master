@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import styles from './HowItWorksPage.module.sass';
 import QuestionsOnPage from "../../components/QuestionsOnPage/QuestionsOnPage";
+import HowItWorksFooter from "../../components/HowItWorksFooter/HowItWorksFooter";
 
 class HowItWorks extends React.Component {
 	constructor(props) {
@@ -121,7 +122,7 @@ class HowItWorks extends React.Component {
 					{
 						this.state.scrollUp && <a href='#header' className={styles.scrollUp}><i className="fas fa-arrow-circle-up"/></a>
 					}
-					<Footer/>
+					<HowItWorksFooter/>
 				</>
 		);
 	}

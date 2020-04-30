@@ -86,4 +86,102 @@ export default {
       ],
     },
   ],
+  FooterItemsTop: [
+    {
+      titletop: 'SQUADHELP',
+      itemstop: [
+        'About',
+        'Contact',
+        'How It Works?',
+        'Testimonials',
+        'Our Work',
+      ],
+    },
+    {
+      titletop: 'RESOURCES',
+      itemstop: [
+        'How It Works',
+        'Become a Creative',
+        'Business Name Generator',
+        'Discussion Forum',
+        'Blog',
+        'Download eBook',
+        'Pricing',
+        'Help & FAQs',
+      ],
+    },
+    {
+      titletop: 'OUR SERVICES',
+      itemstop: [
+        'Naming',
+        'Logo Design',
+        'Taglines',
+        'Premium Names For Sale',
+        'Creative Owned Names For Sale',
+        'Audience Testing',
+        'Trademark Research & Filling',
+        'Managed Agency Service',
+      ],
+    },
+    {
+      titletop: 'LEGAL',
+      itemstop: [
+        'Terms of Service',
+        'Privacy Policy',
+        'Cookie Policy',
+      ],
+    },
+  ],
+  FooterItemsBottom: [
+    {
+
+      itemsBottom: [
+        'Agency & Consulting',
+        'Analytics',
+        'Automotive',
+        'Bar & Cosmetics',
+        'Beauty & Cosmetics',
+        'Beer ',
+        'Beauty & Cosmetics',
+        'Beauty & Cosmetics',
+        'Beauty & Cosmetics',
+        'Beauty & Cosmetics',
+      ],
+    },
+    {
+
+      itemsBottom: [
+        'How It Works',
+        'Become a Creative',
+        'Business Name Generator',
+        'Discussion Forum',
+        'Blog',
+        'Download eBook',
+        'Pricing',
+        'Help & FAQs',
+      ],
+    },
+    {
+
+      itemsBottom: [
+        'Naming',
+        'Logo Design',
+        'Taglines',
+        'Premium Names For Sale',
+        'Creative Owned Names For Sale',
+        'Audience Testing',
+        'Trademark Research & Filling',
+        'Managed Agency Service',
+      ],
+    },
+    {
+
+      itemsBottom: [
+        'Terms of Service',
+        'Privacy Policy',
+        'Cookie Policy',
+      ],
+    },
+  ],
+
 };

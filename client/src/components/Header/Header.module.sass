@@ -12,8 +12,7 @@
     border-bottom: 1px solid #ebebeb
     @media(max-width: 920px)
       justify-content: center
-    @media(max-width: 700px)
-      justify-content: flex-start
+
     .logo
       align-self: flex-end
       @media(max-width: 920px)
@@ -40,6 +39,7 @@
       .nav
         display: flex
         ul
+          width: 100%
           margin: 0
           list-style: none
           display: flex
@@ -47,9 +47,8 @@
           align-items: center
           @media(max-width: 920px)
             padding: 0
-          @media(max-width: 700px)
-            flex-direction: column
-            align-items: flex-start
+
+
           &:last-child li
             ul
               width: 200px
@@ -58,7 +57,9 @@
             align-items: center
             justify-content: flex-start
             margin-right: 30px
+
             @media(max-width: 700px)
+              margin-right: 10px
               width: 100%
               padding: 0 15px
             &:hover
@@ -182,6 +183,8 @@
       border-left: 1px solid #ebebeb
       margin-left: 120px
       height: 40px
+      @media(max-width: 920px)
+        margin-left: 0px
       @media(max-width: 600px)
         margin-left: 10px
       @media(max-width: 360px)
