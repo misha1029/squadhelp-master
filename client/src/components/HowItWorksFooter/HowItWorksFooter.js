@@ -18,7 +18,6 @@ class HowItWorksFooter extends Component {
 		return CONSTANTS.FooterItemsTop.map(item => this.topFooterItemsRender(item))
 	};
 
-
 	bottomFooterItemsRender = (item) => {
 		return (
 				<div key={item.titleBottom}>
@@ -33,21 +32,39 @@ class HowItWorksFooter extends Component {
 
 	render() {
 		return (
-				<div className={styles.container}>
-					<div className={styles.footerContainer}>
-						<div className={styles.footerTop}>
-							<div>
-								{this.topFooterRender()}
+				<>
+					<div className={styles.container}>
+						<div className={styles.footerContainer}>
+							<div className={styles.footerTop}>
+								<div>
+									{this.topFooterRender()}
+								</div>
+							</div>
+							<h2>Featured Categories</h2>
+							<div className={styles.footerTop}>
+								<div>
+									{this.bottomFooterRender()}
+								</div>
 							</div>
 						</div>
-						<h2>Featured Categories</h2>
-						<div className={styles.footerTop}>
-							<div>
-								{this.bottomFooterRender()}
+						<div className={styles.footerBottom}>
+							<div className={styles.bottomContainer}>
+								<div className={styles.bottomLogoContainer}>
+									<img src={`${CONSTANTS.STATIC_IMAGES_PATH}logo.png`} className={styles.bottomLogo} alt='blue_logo'/>
+									<span className={styles.info}>Copyright © 2017 Squadhelp Inc</span>
+								</div>
+								<div className={styles.bottomContactsContainer}>
+									<a className={styles.bottomContact}>
+										<i className="fab fa-facebook-f"/>
+									</a>
+									<a className={styles.bottomContact}>
+										<i className="fab fa-twitter"/>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</>
 		)
 	}
 }

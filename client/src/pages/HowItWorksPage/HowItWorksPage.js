@@ -122,7 +122,11 @@ class HowItWorks extends React.Component {
 					{
 						this.state.scrollUp && <a href='#header' className={styles.scrollUp}><i className="fas fa-arrow-circle-up"/></a>
 					}
-					<HowItWorksFooter/>
+					<div className={styles.footer}>
+						<HowItWorksFooter/>
+					</div>
+
+
 				</>
 		);
 	}
