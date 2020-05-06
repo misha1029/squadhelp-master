@@ -1,3 +1,5 @@
+import createError from './../loggerError/loggerError';
+
 module.exports = (err, req, res, next) => {
   console.log(err);
   if (err.message ===
@@ -12,4 +14,5 @@ module.exports = (err, req, res, next) => {
   } else {
     res.status(err.code).send(err.message);
   }
+  createError(err);
 };
