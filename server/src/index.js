@@ -1,4 +1,5 @@
 require('./dbMongo/mongoose');
+require('./loggerError/createFileError');
 const http = require('http');
 const controller = require('./socketInit');
 const app=require('./appExpress');
