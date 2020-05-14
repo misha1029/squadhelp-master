@@ -1,6 +1,6 @@
 db.articles.aggregate(
    [
-     { $match: { $text: { $search: "паравоз" } } },
-     { $group: { _id: null, views: { $sum: 1} } }
+     { $match: { body: { $search: "паравоз" } } },
+     { $group: { _id: null, count: { $sum: 1} } }
    ]
 )
