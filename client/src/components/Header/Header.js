@@ -3,7 +3,7 @@ import styles from './Header.module.sass';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 import CONSTANTS from '../../constants';
-import {getUserAction, clearUserStore, headerRequest} from '../../actions/actionCreator';
+import {clearUserStore, headerRequest} from '../../actions/actionCreator';
 
 
 class Header extends React.Component {
@@ -78,7 +78,7 @@ class Header extends React.Component {
                     </div>
                 </div>
                 <div className={styles.navContainer}>
-                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt='blue_logo'/>
+                    <Link to={'/'}><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt='blue_logo'/></Link>
                     <div className={styles.leftNav}>
                         <div className={styles.nav}>
                             <ul>

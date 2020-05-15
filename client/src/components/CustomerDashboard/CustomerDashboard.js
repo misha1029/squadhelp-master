@@ -89,6 +89,9 @@ class CustomerDashboard extends React.Component {
 						<Link to='transactions' className={styles.transactionsLink}>
 							Transaction History
 						</Link>
+						<Link to='events' className={styles.transactionsLink}>
+							Events
+						</Link>
 					</div>
 					<div className={styles.contestsContainer}>
 						{
