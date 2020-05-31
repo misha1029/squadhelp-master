@@ -1,0 +1,72 @@
+@import "../../styles/breakpoint"
+@import "../../styles/color"
+
+.container
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 33%
+  height: 130px
+  margin: 0 15px 30px
+  padding: 15px
+  box-sizing: border-box
+  border: 1px solid gray
+  border-radius: 5px
+  transition: 0.5s
+  @media screen and (max-width: $xl)
+    display: flex
+    align-items: center
+  @media screen and (max-width: $x870)
+    width: 100%
+
+.selectedContainer
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 33%
+  height: 130px
+  margin: 0 15px 30px
+  padding: 15px
+  box-sizing: border-box
+  border: 3px solid $blue-color
+  border-radius: 5px
+  transition: 0.5s
+  @media screen and (max-width: $xl)
+    display: flex
+    align-items: center
+  @media screen and (max-width: $x870)
+    width: 100%
+
+.buttonTitle
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 26px
+  border-radius: 10rem
+  padding: 7px 15px
+  text-align: center
+  background-color: #77838f
+  color: $white-color
+
+.buttonText
+  font-size: 14px
+  margin-bottom: 4px
+  color: #77838f
+  line-height: 18px
+  @media screen and (max-width: $xl)
+    display: flex
+    text-align: center
+  @media screen and (min-width: $xl)
+    display: flex
+    text-align: center
+
+.selectedButtonTitle
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  height: 26px
+  border-radius: 10rem
+  padding: 7px 15px
+  background-color: $blue-color
+  color: $white-color
