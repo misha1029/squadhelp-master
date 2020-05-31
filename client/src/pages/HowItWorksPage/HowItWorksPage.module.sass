@@ -1,5 +1,6 @@
 @import "../../styles/breakpoint"
 @import "../../styles/color"
+@import "../../styles/flexPosition"
 
 .container
   max-width: 1170px
@@ -13,8 +14,7 @@
     flex-direction: column
 
 .howItWorkHeader
-  display: flex
-  justify-content: center
+  @extend .flexCenter
   margin-top: 60px
   @media screen and (max-width: $h1)
     display: flex
@@ -67,8 +67,7 @@
       height: 174px
 
 .mainSteps
-  display: flex
-  justify-content: center
+  @extend .flexCenter
   margin: 60px 0
   font-size: 36px
   @media screen and (max-width: $lg)
@@ -109,8 +108,7 @@
     font-weight: 300
 
 .startContestLink
-  display: flex
-  justify-content: center
+  @extend .flexCenter
   background-color: $blue-color
   width: 100%
   z-index: 9999
@@ -158,9 +156,7 @@
     padding: 20px 0px 20px 5px
 
 .questionsMark
-  display: flex
-  justify-content: center
-  align-items: center
+  @extend .flexCenter
   height: 60px
   width: 60px
   border-radius: 50%
@@ -242,9 +238,7 @@
   color: $blue-color
 
 .getInTouch
-  display: flex
-  justify-content: center
-  align-items: center
+  @extend .flexCenter
   padding: 35px 0
   color: $white-color
   width: 100%
@@ -263,9 +257,7 @@
     text-align: center
 
 .envelopeIcon
-  display: flex
-  justify-content: center
-  align-items: center
+  @extend .flexCenter
   background-color: $white-color
   height: 100px
   width: 100px
@@ -325,9 +317,7 @@
     margin-top: 20px
 
 .scrollUp
-  display: flex
-  justify-content: center
-  align-items: center
+  @extend .flexCenter
   position: fixed
   height: 33px
   width: 33px
@@ -343,9 +333,7 @@
     background-color: #f65422
 
 .footer
-  display: flex
-  justify-content: center
-  align-items: center
+  @extend .flexCenter
   padding-top: 86px
   color: $white-color
   width: 100%

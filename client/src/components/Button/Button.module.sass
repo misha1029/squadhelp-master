@@ -1,5 +1,6 @@
 @import "../../styles/breakpoint"
 @import "../../styles/color"
+@import "../../styles/flexPosition"
 
 .container
   display: flex
@@ -38,9 +39,7 @@
     width: 100%
 
 .buttonTitle
-  display: flex
-  align-items: center
-  justify-content: center
+  @extend .flexCenter
   height: 26px
   border-radius: 10rem
   padding: 7px 15px
@@ -61,9 +60,7 @@
     text-align: center
 
 .selectedButtonTitle
-  display: flex
-  align-items: center
-  justify-content: center
+  @extend .flexCenter
   text-align: center
   height: 26px
   border-radius: 10rem
