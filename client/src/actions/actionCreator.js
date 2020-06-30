@@ -450,3 +450,10 @@ export const removeContestType = data => {
         data: data,
     }
 };
+
+export const createNewEvent = (event) => {
+    return {
+        type: ACTION.CREATE_EVENT,
+        event,
+    }
+};
