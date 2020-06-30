@@ -1,0 +1,31 @@
+@import "../../styles/breakpoint"
+@import "../../styles/flexPosition"
+
+.container
+  display: flex
+  align-items: center
+  padding: 60px 20px
+
+.contentContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 1170px
+  h1
+    font-size: 26px
+    font-weight: 400
+
+.containerForm
+  @extend .flexCenter
+
+.containerList
+  display: flex
+  flex-direction: column-reverse
+  align-items: center
+  width: 100%
+
+.timer
+  display: flex
+  flex-direction: column
+  width: 50%
+  padding: 30px 0

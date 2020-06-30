@@ -1,0 +1,44 @@
+@import "../../styles/breakpoint"
+@import "../../styles/color"
+@import "../../styles/flexPosition"
+
+.container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  padding: 10px 15px 10px 25px
+  margin-bottom: 10px
+  position: relative
+  background-color: #f5f4f4
+  overflow: hidden
+  font-weight: 500
+  font-size: 16px
+  border-radius: 10px
+  span
+    color: #323131
+    font-size: 14px
+  @media screen and (max-width: 768px)
+    font-size: 12px
+
+
+.progress
+  opacity: 0.5
+  z-index: 1
+  background-color: #ffff00
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 0
+  position: absolute
+
+.eventsCircle
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  font-size: 12px
+  background-color: #EE2F24
+  position: absolute
+  left: 5px
+  transform: translate(-10%, -70%)

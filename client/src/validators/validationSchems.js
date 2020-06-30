@@ -61,5 +61,11 @@ export default {
         lastName: yup.string().test('test-lastName','required',value => (value && value.trim().length>=1)).required('required'),
         displayName: yup.string().test('test-displayName','required',value => (value && value.trim().length>=1)).required('required'),
         file: yup.mixed()
-    })
+    }),
+    EventSchema: yup.object().shape({
+        eventName: yup.string().matches(/(?!^ +$)^.+$/, 'Event name must has at least one non whitespace character'),
+        endTime: yup.date().min(new Date(), 'End event time must be greater than now'),
+        reminderTime: yup.date().min(new Date(), 'Reminder time must be greater than now')
+
+    }),
 }

@@ -5,27 +5,27 @@ const initialState = {
     events: [
         {
             eventName: 'Birthday',
-            endTime: moment('11.08.2020','DD.MM.YYYY'),
+            eventTime: moment('11.08.2020','DD.MM.YYYY'),
             reminderTime: moment('10.08.2020','DD.MM.YYYY'),
         },
         {
             eventName: 'Birthday',
-            endTime: moment('10.08.2020','DD.MM.YYYY'),
+            eventTime: moment('10.08.2020','DD.MM.YYYY'),
             reminderTime: moment('09.08.2020','DD.MM.YYYY'),
         },
         {
             eventName: 'sdvsvs',
-            endTime: moment('25.06.2020','DD.MM.YYYY'),
+            eventTime: moment('25.06.2020','DD.MM.YYYY'),
             reminderTime: moment('09.08.2020','DD.MM.YYYY'),
         },
         {
             eventName: 'Birthday',
-            endTime: moment('11.08.2020','DD.MM.YYYY'),
+            eventTime: moment('11.08.2020','DD.MM.YYYY'),
             reminderTime: moment('10.08.2020','DD.MM.YYYY'),
         },
         {
             eventName: 'sdvsvs',
-            endTime: moment('25.06.2020','DD.MM.YYYY'),
+            eventTime: moment('25.06.2020','DD.MM.YYYY'),
             reminderTime: moment('09.08.2020','DD.MM.YYYY'),
         },
     ],

@@ -1,0 +1,40 @@
+@import "../../styles/breakpoint"
+@import "../../styles/color"
+@import "../../styles/flexPosition"
+
+.eventForm
+  @extend .flexColumn
+  padding: 30px 30px 40px 30px
+  background-color: #f5f4f4
+  box-shadow: 0 0 10px 0 rgba(128,176,167,1)
+  @media screen and (max-width: $lg)
+    padding: 10px 10px 20px 10px
+
+.submitContainer
+  @extend .flexCenter
+  border-radius: 7px
+  background-color: $blue-color
+  padding: 17px
+  border: none
+  width: 90%
+
+
+.inscription
+  font-size: 16px
+  color: $white-color
+
+.inputContainer
+  @extend .flexCenter
+
+.input
+  width: 300px
+  text-align: center
+  background-color: #f1efef
+  border: none
+  border-radius: 4px
+  color: black
+  font-size: 18px
+  padding: 10px
+  outline: none
+  margin-bottom: 15px
+  flex: 1
