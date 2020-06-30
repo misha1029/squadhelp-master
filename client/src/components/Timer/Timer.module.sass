@@ -3,24 +3,19 @@
 @import "../../styles/flexPosition"
 
 .container
-  display: flex
+  @extend .flexCenter
   justify-content: space-between
-  align-items: center
-  text-align: center
-  padding: 10px 15px 10px 25px
+  padding: 10px 15px 10px 20px
   margin-bottom: 10px
   position: relative
   background-color: #f5f4f4
   overflow: hidden
   font-weight: 500
   font-size: 16px
-  border-radius: 10px
+
   span
     color: #323131
     font-size: 14px
-  @media screen and (max-width: 768px)
-    font-size: 12px
-
 
 .progress
   opacity: 0.5
@@ -33,11 +28,10 @@
   width: 0
   position: absolute
 
-.eventsCircle
-  width: 15px
-  height: 15px
+.mark
+  width: 12px
+  height: 12px
   border-radius: 50%
-  font-size: 12px
   background-color: #EE2F24
   position: absolute
   left: 5px

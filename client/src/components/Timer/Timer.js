@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import moment from 'moment';
 import styles from './Timer.module.sass';
-import PropTypes from 'prop-types';
 
 const Timer = ({eventName, eventTime, now}) => {
 
@@ -40,7 +39,7 @@ const Timer = ({eventName, eventTime, now}) => {
         <>
             <li className={styles.container}>
                 {Object.keys(timeLeft).length === 0 &&
-                <div className={styles.eventsCircle}/>}
+                <div className={styles.mark}/>}
                 {Object.keys(timeLeft).length > 0 &&
                 <div style={{width: `${Math.round(((new Date() - now) / (eventTime - now)) * 100)}%`}} className={styles.progress}/>}
                 <div>{eventName}</div>
@@ -50,7 +49,6 @@ const Timer = ({eventName, eventTime, now}) => {
             </li>
         </>
     );
-
 }
 
 export default Timer;
