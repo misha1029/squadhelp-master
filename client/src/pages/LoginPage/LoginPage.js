@@ -25,7 +25,7 @@ const LoginPage = (props) => {
 
 							<h2>LOGIN TO YOUR ACCOUNT</h2>
 							<LoginForm/>
-							<Link to={'./PasswordRecoveryPage'}>
+							<Link to={'./ResetPasswordPage'}>
 								<div className={styles.ForgotPassword}>Forgot password?</div>
 							</Link>
 						</div>
