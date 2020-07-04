@@ -21,7 +21,7 @@ import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatCo
 import TransactionPage from "./pages/TransactionPage/TransactionPage";
 import HowItWorks from "./pages/HowItWorksPage/HowItWorksPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
-import PasswordRecoveryPage from "./pages/PasswordRecoveryPage/PasswordRecoveryPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 
 
 
@@ -67,7 +67,7 @@ class App extends Component {
                     <Route exact path='/account' component={PrivateHoc(UserProfile)}/>
                     <Route exact path='/transactions' component={PrivateHoc(TransactionPage)}/>
                     <Route exact path='/events' component={PrivateHoc(EventsPage)}/>
-                    <Route exact path='/PasswordRecoveryPage' component={OnlyNotAuthorizedUserHoc(PasswordRecoveryPage)}/>
+                    <Route exact path='/ResetPasswordPage' component={OnlyNotAuthorizedUserHoc(ResetPasswordPage)}/>
 
                     <Route component={NotFound}/>
                 </Switch>

@@ -2,12 +2,13 @@ import React from "react";
 import styles from './EventsPage.module.sass'
 import Header from "../../components/Header/Header";
 import Timer from "../../components/Timer/Timer";
-import CreateEventForm from "../../components/CreateEventForm/CreateEventForm";
+import EventForm from "../../components/EventForm/EventForm";
 import {connect} from 'react-redux';
 
 
 const EventsPage = (props) => {
 	const {events, activeEvents} = props
+
 	return (
 		<>
 			<Header/>
@@ -15,7 +16,7 @@ const EventsPage = (props) => {
 				<div className={styles.contentContainer}>
 					<h1>Timer creation form</h1>
 					<div className={styles.containerForm}>
-						<CreateEventForm/>
+						<EventForm/>
 					</div>
 					<div className={styles.containerList}>
 						<ul className={styles.timer}>

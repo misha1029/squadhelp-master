@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import styles from './CreateEventForm.module.sass';
+import styles from './EventForm.module.sass';
 import {Field, reduxForm, updateSyncErrors} from 'redux-form';
 import customValidator from '../../validators/validator';
 import Schems from '../../validators/validationSchems';
-import FormField from "../FormInput/FormInput";
+import FormInput from "../FormInput/FormInput";
 import FormDatePicker from "../FormDatePicker/FormDatePicker";
 import {createNewEvent} from '../../actions/actionCreator';
 
 
-const CreateEventForm = (props) => {
+const EventForm = (props) => {
     const {handleSubmit, createEvent, reset} = props
 
     const onSubmit = (values) => {
@@ -31,7 +31,7 @@ const CreateEventForm = (props) => {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.eventForm}>
             <Field name='eventName'
                    {...formInputClasses}
-                   component={FormField}
+                   component={FormInput}
                    type='text'
                    label='Event Name'
             />
@@ -60,4 +60,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(null, mapDispatchToProps)(reduxForm({
     form: 'event',
     validate: customValidator(Schems.EventSchema),
-})(CreateEventForm));
+})(EventForm));

@@ -63,9 +63,12 @@ export default {
         file: yup.mixed()
     }),
     EventSchema: yup.object().shape({
-        eventName: yup.string().matches(/(?!^ +$)^.+$/, 'Event name must has at least one non whitespace character'),
-        endTime: yup.date().min(new Date(), 'End event time must be greater than now'),
-        reminderTime: yup.date().min(new Date(), 'Reminder time must be greater than now')
-
+        eventName: yup.string().matches(/(?!^ +$)^.+$/, 'Event name must not contain spaces').required(),
+        eventTime: yup.date().min(new Date(), 'Event time must be greater than now').required(),
+        reminderTime: yup.date().min(new Date(), 'Reminder time must be greater than now').required(),
+    }),
+    ResetPasswordSchema: yup.object().shape({
+        email: yup.string().email('check email').required('Email is required'),
+        newPassword: yup.string().test('test-password','min 6 symbols',value => (value && value.trim().length>=6)).required(),
     }),
 }

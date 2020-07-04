@@ -21,7 +21,7 @@ instance.interceptors.response.use(response => {
     }
     return response;
 }, err => {
-    if (err.response.status === 408 && history.location.pathname !== '/login' && history.location.pathname !== '/registration' && history.location.pathname !== '/'&& history.location.pathname !== '/PasswordRecoveryPage') {
+    if (err.response.status === 408 && history.location.pathname !== '/login' && history.location.pathname !== '/registration' && history.location.pathname !== '/'&& history.location.pathname !== '/ResetPasswordPage') {
         history.replace('/login');
     }
     return Promise.reject(err);
