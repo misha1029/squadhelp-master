@@ -43,6 +43,7 @@ export const getContestById = (data) => {
     });
 };
 
+export const updatePassword = (data) => http.post('resetPassword', data);
 
 
 

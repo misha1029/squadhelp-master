@@ -4,8 +4,16 @@ import {Link} from "react-router-dom";
 import ResetPasswordForm from "../../components/ResetPasswordForm/ResetPasswordForm";
 import CONSTANTS from "../../constants";
 import Error from "../../components/Error/Error";
+import { connect } from 'react-redux';
+import { updatePassword, clearAuth, clearErrorSignUpAndLogin } from '../../actions/actionCreator';
 
-const ResetPasswordPage = ({error, clearError}) => {
+const ResetPasswordPage = ({error, authClear, updatePassword}) => {
+
+    const handleSubmit = (values) => {
+        updatePassword(values);
+    }
+
+    const clearFields = () => authClear();
 
     return (
         <div className={styles.mainContainer}>
@@ -18,9 +26,9 @@ const ResetPasswordPage = ({error, clearError}) => {
                 </div>
                 <div className={styles.formContainer}>
                     <div className={styles.form}>
-                        {error && <Error data={error.data} status={error.status} clearError={clearError}/>}
+                        {error && <Error data={error.data} status={error.status} clearError={clearFields}/>}
                         <h2>RESET YOUR PASSWORD</h2>
-                        <ResetPasswordForm/>
+                        <ResetPasswordForm onSubmit={handleSubmit}/>
                     </div>
                 </div>
             </div>
@@ -28,6 +36,13 @@ const ResetPasswordPage = ({error, clearError}) => {
     );
 };
 
+const mapStateToProps = state => state.auth;
 
-
-export default ResetPasswordPage;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        clearError: () => dispatch(clearErrorSignUpAndLogin()),
+        authClear: () => dispatch(clearAuth()),
+        updatePassword: (data) => dispatch(updatePassword(data)),
+    }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ResetPasswordPage);

@@ -1,16 +1,11 @@
 import React from 'react';
 import styles from './ResetPasswordForm.module.sass';
-import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
 import Schems from '../../validators/validationSchems';
 import customValidator from '../../validators/validator';
 import FormInput from "../FormInput/FormInput";
 
-const ResetPasswordForm = ({handleSubmit, isFetching, resetPassword}) => {
-
-    const onSubmit = (values) => {
-        resetPassword(values);
-    };
+const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
 
     const formInputClasses = {
         containerStyle: styles.inputContainer,
@@ -21,7 +16,7 @@ const ResetPasswordForm = ({handleSubmit, isFetching, resetPassword}) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(handleSubmit)}>
             <Field
                 name='email'
                 className = {styles.input}
@@ -40,21 +35,14 @@ const ResetPasswordForm = ({handleSubmit, isFetching, resetPassword}) => {
                 type='password'
                 label='New Password'
             />
-            <button type='submit' disabled={isFetching} className={styles.submitContainer}>
+            <button type='submit' disabled={submitting} className={styles.submitContainer}>
                 <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'Reset Password'}</span>
             </button>
         </form>
     );
 };
 
-
-
-
-const mapDispatchToProps = dispatch => ({
-
-});
-
-export default connect(null, mapDispatchToProps)(reduxForm({
+export default reduxForm({
     form: 'resetPassword',
     validate: customValidator(Schems.ResetPasswordSchema),
-})(ResetPasswordForm));
+})(ResetPasswordForm);
