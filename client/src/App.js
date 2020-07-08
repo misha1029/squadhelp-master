@@ -22,6 +22,7 @@ import TransactionPage from "./pages/TransactionPage/TransactionPage";
 import HowItWorks from "./pages/HowItWorksPage/HowItWorksPage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
+import ResetPage from './pages/ResetPage/ResetPage';
 
 
 
@@ -69,6 +70,7 @@ class App extends Component {
                     <Route exact path='/transactions' component={PrivateHoc(TransactionPage)}/>
                     <Route exact path='/events' component={PrivateHoc(EventsPage)}/>
                     <Route exact path='/resetPassword' component={OnlyNotAuthorizedUserHoc(ResetPasswordPage)}/>
+                    <Route exact path='/reset' component={ResetPage}/>
 
                     <Route component={NotFound}/>
                 </Switch>
