@@ -195,4 +195,11 @@ router.get(
   contestController.getOffersFiles
 );
 
+router.post(
+    '/resetPassword',
+    validators.validateResetPassword,
+    hashPass,
+    userController.resetPassword,
+);
+
 module.exports = router;

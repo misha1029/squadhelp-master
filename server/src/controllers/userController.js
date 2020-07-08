@@ -13,6 +13,7 @@ const controller = require('../socketInit');
 const userQueries = require('./queries/userQueries');
 const bankQueries = require('./queries/bankQueries');
 const ratingQueries = require('./queries/ratingQueries');
+import { emailLinkPassword } from '../utils/emailLinkPassword';
 
 module.exports.login = async (req, res, next) => {
   try {
@@ -210,4 +211,17 @@ module.exports.cashout = async (req, res, next) => {
   }
 };
 
+module.exports.resetPassword = async (req, res, next) => {
+  try {
+    const foundUser = await userQueries.findUser({ email: req.body.email });
+    const accessToken = jwt.sign({
+      userId: foundUser.id,
+      hashPass: req.hashPass,
+    }, CONSTANTS.JWT_SECRET, { expiresIn: CONSTANTS.ACCESS_TOKEN_TIME });
+    emailLinkPassword(accessToken, req.body.email);
+    res.send();
+  } catch (err) {
+    next(err);
+  }
+};
 

@@ -29,4 +29,8 @@ module.exports.contestSchem = yup.object().shape({
   brandStyle: yup.string().min(1),
 });
 
+module.exports.resetPasswordSchem = yup.object().shape({
+  email: yup.string().email().required().min(4),
+  password: yup.string().required().min(1),
+});
 
