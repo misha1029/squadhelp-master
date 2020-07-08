@@ -1,11 +1,11 @@
 import React from "react";
-import styles from './ResetPasswordPage.module.sass';
 import {Link} from "react-router-dom";
+import styles from './ResetPasswordPage.module.sass';
 import ResetPasswordForm from "../../components/ResetPasswordForm/ResetPasswordForm";
-import CONSTANTS from "../../constants";
 import Error from "../../components/Error/Error";
-import { connect } from 'react-redux';
 import { updatePassword, clearAuth, clearErrorSignUpAndLogin } from '../../actions/actionCreator';
+import CONSTANTS from "../../constants";
+import { connect } from 'react-redux';
 
 const ResetPasswordPage = ({error, authClear, updatePassword}) => {
 

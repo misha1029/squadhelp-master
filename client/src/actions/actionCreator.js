@@ -457,6 +457,7 @@ export const createNewEvent = (event) => {
         event,
     }
 };
+
 export const updatePassword = (data) => {
     return {
         type: ACTION.UPDATE_PASSWORD,

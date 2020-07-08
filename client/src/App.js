@@ -25,6 +25,7 @@ import ResetPasswordPage from "./pages/ResetPasswordPage/ResetPasswordPage";
 
 
 
+
 class App extends Component {
     render() {
         return (
@@ -67,7 +68,7 @@ class App extends Component {
                     <Route exact path='/account' component={PrivateHoc(UserProfile)}/>
                     <Route exact path='/transactions' component={PrivateHoc(TransactionPage)}/>
                     <Route exact path='/events' component={PrivateHoc(EventsPage)}/>
-                    <Route exact path='/ResetPasswordPage' component={OnlyNotAuthorizedUserHoc(ResetPasswordPage)}/>
+                    <Route exact path='/resetPassword' component={OnlyNotAuthorizedUserHoc(ResetPasswordPage)}/>
 
                     <Route component={NotFound}/>
                 </Switch>
@@ -78,5 +79,3 @@ class App extends Component {
 }
 
 export default App;
-
-

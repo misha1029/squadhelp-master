@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './ResetPasswordForm.module.sass';
 import {Field, reduxForm} from 'redux-form';
+import FormInput from "../FormInput/FormInput";
 import Schems from '../../validators/validationSchems';
 import customValidator from '../../validators/validator';
-import FormInput from "../FormInput/FormInput";
+
 
 const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
 
@@ -16,7 +17,7 @@ const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(handleSubmit)}>
+        <form onSubmit={handleSubmit}>
             <Field
                 name='email'
                 className = {styles.input}
@@ -27,7 +28,7 @@ const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
                 label='Email Address'
             />
             <Field
-                name='newPassword'
+                name='password'
                 className = {styles.input}
                 containerClassName = {styles.inputContainer}
                 errorClassName = {styles.fieldWarning}

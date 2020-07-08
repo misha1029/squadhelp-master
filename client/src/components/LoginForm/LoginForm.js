@@ -20,42 +20,42 @@ class LoginForm extends React.Component {
     };
 
 
-  formInputClasses = {
-    classInputStyle: styles.input,
-    classNotValid:  styles.notValid,
-    classValid:  styles.valid,
-    classInputContainer: styles.inputContainer,
-    classWarningForContainer: styles.fieldWarning,
-  };
+    formInputClasses = {
+        classInputStyle: styles.input,
+        classNotValid:  styles.notValid,
+        classValid:  styles.valid,
+        classInputContainer: styles.inputContainer,
+        classWarningForContainer: styles.fieldWarning,
+    };
 
     render() {
         const {isFetching} = this.props.auth;
         const {handleSubmit, submitting} = this.props;
         return (
 
-                <form onSubmit={handleSubmit(this.submit)}>
-                    <Field
-                        name='email'
-                        className = {styles.input}
-                        containerClassName = {styles.inputContainer}
-                        errorClassName = {styles.fieldWarning}
-                        component={FormInput}
-                        type='text'
-                        label='Email Address'
-                    />
-                    <Field
-                        name='password'
-                        className = {styles.input}
-                        containerClassName = {styles.inputContainer}
-                        errorClassName = {styles.fieldWarning}
-                        component={FormInput}
-                        type='password'
-                        label='password'
-                    />
-                    <button type='submit' disabled={submitting} className={styles.submitContainer}>
-                        <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'LOGIN'}</span>
-                    </button>
-                </form>
+            <form onSubmit={handleSubmit(this.submit)}>
+                <Field
+                    name='email'
+                    className = {styles.input}
+                    containerClassName = {styles.inputContainer}
+                    errorClassName = {styles.fieldWarning}
+                    component={FormInput}
+                    type='text'
+                    label='Email Address'
+                />
+                <Field
+                    name='password'
+                    className = {styles.input}
+                    containerClassName = {styles.inputContainer}
+                    errorClassName = {styles.fieldWarning}
+                    component={FormInput}
+                    type='password'
+                    label='password'
+                />
+                <button type='submit' disabled={submitting} className={styles.submitContainer}>
+                    <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'LOGIN'}</span>
+                </button>
+            </form>
 
         );
     }

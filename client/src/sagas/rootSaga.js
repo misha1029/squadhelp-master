@@ -25,7 +25,7 @@ import {
     removeChatFromCatalogSaga,
     changeCatalogName
 } from './chatSagas';
-import {updatePasswordSaga} from "./updatePasswordSaga";
+import {updatePasswordSaga} from './updatePasswordSaga';
 
 function* rootSaga() {
     yield  takeLatest(ACTION.AUTH_ACTION_REGISTER, registerSaga);

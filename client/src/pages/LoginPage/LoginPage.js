@@ -25,7 +25,7 @@ const LoginPage = (props) => {
 
 							<h2>LOGIN TO YOUR ACCOUNT</h2>
 							<LoginForm/>
-							<Link to={'./ResetPasswordPage'}>
+							<Link to={'./resetPassword'}>
 								<div className={styles.ForgotPassword}>Forgot password?</div>
 							</Link>
 						</div>
@@ -43,7 +43,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		clearError: () => dispatch(clearErrorSignUpAndLogin()),
-      authClear: () => dispatch(clearAuth())
+      	authClear: () => dispatch(clearAuth())
 	}
 };
 
