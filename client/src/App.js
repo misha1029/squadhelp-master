@@ -70,7 +70,7 @@ class App extends Component {
                     <Route exact path='/transactions' component={PrivateHoc(TransactionPage)}/>
                     <Route exact path='/events' component={PrivateHoc(EventsPage)}/>
                     <Route exact path='/resetPassword' component={OnlyNotAuthorizedUserHoc(ResetPasswordPage)}/>
-                    <Route exact path='/reset' component={ResetPage}/>
+                    <Route exact path='/reset/:id' component={ResetPage}/>
 
                     <Route component={NotFound}/>
                 </Switch>

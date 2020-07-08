@@ -1,11 +1,15 @@
 import React  from 'react';
+import styles from "../ResetPasswordPage/ResetPasswordPage.module.sass";
 import {Link} from "react-router-dom";
+import CONTANTS from '../../constants';
 import { onlyForNotAuthorize } from '../../actions/actionCreator';
 import { connect } from 'react-redux';
-import styles from "./ResetPage.module.sass";
 import CONSTANTS from "../../constants";
 
+
 const RecoverPage = (props) => {
+
+    window.localStorage.setItem(CONTANTS.ACCESS_TOKEN, props.match.params.id);
 
     return (
         <div className={styles.mainContainer}>
