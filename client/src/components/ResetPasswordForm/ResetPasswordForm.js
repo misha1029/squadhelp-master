@@ -4,9 +4,22 @@ import {Field, reduxForm} from 'redux-form';
 import FormInput from "../FormInput/FormInput";
 import Schems from '../../validators/validationSchems';
 import customValidator from '../../validators/validator';
+import {toast} from "react-toastify";
 
 
 const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
+
+    const notify = () => {
+        toast.info('Go to the mail to complete the password updates', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    };
 
     const formInputClasses = {
         containerStyle: styles.inputContainer,
@@ -36,7 +49,7 @@ const ResetPasswordForm = ({handleSubmit, isFetching, submitting}) => {
                 type='password'
                 label='New Password'
             />
-            <button type='submit' disabled={submitting} className={styles.submitContainer}>
+            <button  onClick={notify} type='submit' disabled={submitting} className={styles.submitContainer}>
                 <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'Reset Password'}</span>
             </button>
         </form>
