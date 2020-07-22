@@ -4,6 +4,7 @@ import CustomerDashboard from '../../components/CustomerDashboard/CustomerDashbo
 import CreatorDashboard from '../../components/CreatorDashboard/CreatorDashboard';
 import Header from '../../components/Header/Header';
 import {connect} from 'react-redux';
+import ModeratorDashboard from "../../components/ModeratorDashboard/ModeratorDashboard";
 
 
 const Dashboard = (props) => {
@@ -14,9 +15,12 @@ const Dashboard = (props) => {
 				{
 					role === CONSTANTS.CUSTOMER ?
 							<CustomerDashboard history={history} match={props.match}/>
-							:
+							: role === CONSTANTS.CREATOR ?
 							<CreatorDashboard history={history} match={props.match}/>
+							:
+							<ModeratorDashboard/>
 				}
+
 			</div>
 	);
 };
